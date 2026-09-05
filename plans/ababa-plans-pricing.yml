@@ -1,0 +1,26 @@
+generated: '2026-09-05'
+method: searched
+source: https://hr.ababa.co.jp/
+plan_count: 0
+public_pricing: false
+note: >-
+  ABABA publishes no pricing page. The corporate/marketing site hr.ababa.co.jp exposes only
+  /ababa (company profile), /article, /whitepaper, /news-1, /privacy-policy and
+  /jobpostings_policy in its sitemap; /price, /pricing and /plan are not real routes — the
+  Studio.Design site answers HTTP 200 with its default marketing shell for any unknown path
+  (a negative-control path returns the identical shell), so those 200s are soft-404s, not
+  pricing pages. Employer pricing is quoted through a sales conversation and a document
+  (資料) request. There is no API product and therefore no API pricing of any kind.
+plans: []
+evidence:
+- url: https://hr.ababa.co.jp/
+  status: 200
+- url: https://hr.ababa.co.jp/sitemap-static.xml
+  status: 200
+  note: Full published route list; contains no pricing route.
+- url: https://hr.ababa.co.jp/price
+  status: 200
+  note: Soft-404 — 47,420 bytes, byte-identical shell size to the negative control.
+- url: https://hr.ababa.co.jp/zzz-does-not-exist-9f3a
+  status: 200
+  note: Negative control — 47,492 bytes, proving the 200 above is a catch-all.

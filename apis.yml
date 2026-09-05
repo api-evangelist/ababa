@@ -1,17 +1,34 @@
 aid: ababa
-name: Ababa
-description: 'Ababa is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: ABABA
+description: 'ABABA (株式会社ABABA) is a Tokyo-based Japanese HR technology company operating a new-graduate
+  direct-recruiting platform built on an unusual premise: only students who have already reached the FINAL
+  interview stage at another company may register, and each submits evidence of that selection history,
+  so every candidate in the database arrives pre-qualified by someone else''s hiring bar. Employers then
+  scout those near-miss finalists into abbreviated selection flows — the company reports that 94% of adopting
+  employers waive the entry sheet or the first interview for an ABABA candidate. A second product, REALME,
+  runs AI mock interviews and matching. Founded 19 October 2020 and led by co-representatives Shunki Kubo
+  (CEO) and Tatsuya Nakai, ABABA raised a 1.25 billion yen Series B in March 2025 led by DBJ Capital (1.82
+  billion yen total to date) and reported passing 3,000 cumulative adopting companies in November 2025.
+  The product ships purely as an end-user web application: ABABA publishes no developer portal, API documentation,
+  SDK, webhook catalog or machine-readable specification of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/ababa/refs/heads/main/apis.yml
+image: https://storage.googleapis.com/production-os-assets/assets/d1928efe-3d67-4bc2-ba43-8608be43531f
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
+position: Producing
 tags:
 - Company
+- Human Resources
+- Recruiting
+- Talent Acquisition
+- HR Technology
+- Job Search
+- Artificial Intelligence
+- Japan
+- SaaS
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +36,58 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ababa-domain-security.yml
 - type: Website
+  url: https://hr.ababa.co.jp/
+- type: Blog
+  url: https://hr.ababa.co.jp/article
+- type: PrivacyPolicy
+  url: https://hr.ababa.co.jp/privacy-policy
+- type: TermsOfService
+  url: https://ababa.co.jp/terms_of_service
+- type: SecondaryMarket
   url: https://equityzen.com/company/ababa
+- type: LLMsTxt
+  url: llms/ababa-llms.txt
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: 'ABABA runs two real first-party hosts — a Bubble.io end-user application at ababa.co.jp whose
+    robots.txt is Disallow:/ for every user agent, and an undocumented Go API at api.ababa.co.jp (AWS
+    ap-northeast-1, permissive CORS, /health 200) that backs it — but the company publishes no developer
+    program at all: every OpenAPI/Swagger/GraphQL/agent-card/apis.json path on all three hosts 404s against
+    a clean negative control, api./docs./developer subdomains either 404 or do not resolve, and the corporate
+    site''s own sitemap lists only company, article, whitepaper, news, privacy and job-posting-policy
+    routes with nothing developer-facing.'
+  evidence:
+  - url: https://api.ababa.co.jp/openapi.json
+    status: 404
+  - url: https://api.ababa.co.jp/graphql
+    status: 404
+  - url: https://api.ababa.co.jp/docs
+    status: 404
+  - url: https://api.ababa.co.jp/health
+    status: 200
+  - url: https://api.ababa.co.jp/.well-known/agent-card.json
+    status: 404
+  - url: https://api.ababa.co.jp/.well-known/ababa-negative-control-7f3ab91c.json
+    status: 404
+  - url: https://ababa.co.jp/openapi.json
+    status: 404
+  - url: https://ababa.co.jp/apis.json
+    status: 404
+  - url: https://ababa.co.jp/llms.txt
+    status: 404
+  - url: https://ababa.co.jp/robots.txt
+    status: 200
+  - url: https://hr.ababa.co.jp/sitemap-static.xml
+    status: 200
+  - url: https://hr.ababa.co.jp/zzz-does-not-exist-9f3a
+    status: 200
+  checked: '2026-09-05'

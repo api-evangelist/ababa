@@ -1,0 +1,36 @@
+generated: '2026-09-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts plus the ababa.co.jp application
+  host and the api.ababa.co.jp first-party API host found by DNS
+hosts:
+- host: hr.ababa.co.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  7 20:32:24 2026 GMT
+  hsts: true
+  hsts_max_age: 31557600
+- host: ababa.co.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  6 07:33:30 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  note: 'Bubble.io-hosted end-user application behind Cloudflare; robots.txt is Disallow:
+    / for all user agents.'
+- host: api.ababa.co.jp
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Feb 17 23:59:59 2027 GMT
+  hsts: false
+  hsts_max_age: null
+  note: 'First-party API host (AWS ap-northeast-1). Answers 404 text/plain at the
+    root with permissive CORS (access-control-allow-origin: *, X-Acting-Company-ID);
+    /health returns 200 application/json. No HSTS header. Undocumented: no portal,
+    reference or specification is published for it.'
+domains:
+- domain: ababa.co.jp
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: true
+  dmarc_policy: none

@@ -1,0 +1,18 @@
+generated: '2026-09-05'
+method: searched
+source: https://hr.ababa.co.jp/
+limit_count: 0
+note: >-
+  No rate limits are documented because no API is documented. ABABA publishes no developer
+  portal, API reference, or specification on any host, so there is no published limit,
+  window, burst, or response-header contract (X-RateLimit-*, RateLimit-*, Retry-After) to
+  record. An honest zero, not an unchecked field.
+rate_limits: []
+evidence:
+- url: https://api.ababa.co.jp/docs
+  status: 404
+- url: https://api.ababa.co.jp/openapi.json
+  status: 404
+- url: https://hr.ababa.co.jp/sitemap-static.xml
+  status: 200
+  note: Published route list contains no developer or API documentation route.

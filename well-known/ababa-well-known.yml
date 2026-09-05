@@ -1,0 +1,137 @@
+generated: '2026-09-05'
+method: probed
+source: >-
+  Live GET of the named /.well-known/ path list (plus /apis.json, /apis.yml and /llms.txt)
+  against every host this record knows: the registrable domain and application host
+  ababa.co.jp, the marketing/corporate host hr.ababa.co.jp, and the first-party API host
+  api.ababa.co.jp discovered by DNS. Probed 2026-09-05.
+hit_count: 0
+note: >-
+  ABABA serves no /.well-known/ discovery document on any host. Two of the three hosts give
+  a clean negative signal (real 404s, and a negative-control path that cannot exist also
+  404s). The third, hr.ababa.co.jp, is a Studio.Design/Nuxt single-page site that answers
+  HTTP 200 with the same ~49KB marketing shell for EVERY path, including the negative
+  control — so none of its 200s is a document and none is recorded as a hit. No WellKnown
+  and no SecurityTxt pointer is emitted; this file records a measured absence, not a
+  surface.
+hosts:
+- host: https://ababa.co.jp
+  soft_404_control:
+    path: /.well-known/ababa-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 55588
+    verdict: passed
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://hr.ababa.co.jp
+  soft_404_control:
+    path: /.well-known/ababa-negative-control-7f3ab91c.json
+    status: 200
+    bytes: 49497
+    verdict: failed
+    note: >-
+      Path-echoing catch-all. Every /.well-known/* request returns HTTP 200 with the site's
+      marketing HTML shell, so every 200 below is discarded as a non-document.
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/openid-configuration
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/api-catalog
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/agent-card.json
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/agent.json
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/ucp.json
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /.well-known/acp.json
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /apis.json
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /apis.yml
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+  - path: /llms.txt
+    status: 200
+    hit: false
+    note: HTML marketing shell, not a document (catch-all)
+- host: https://api.ababa.co.jp
+  soft_404_control:
+    path: /.well-known/ababa-negative-control-7f3ab91c.json
+    status: 404
+    bytes: 18
+    verdict: passed
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /apis.json
+    status: 404
