@@ -80,19 +80,19 @@ Each property below is a page on APIs.io carrying the machine-readable artifact 
 
 Authentication, trust centre, and vulnerability disclosure.
 
-- [Ababa Domain Security](https://apis.io/security/ababa/ababa-domain-security/)
+- [ABABA Domain Security](https://apis.io/security/ababa/ababa-domain-security/)
 
 #### Plans and pricing (1)
 
 Published plans, tiers and prices.
 
-- [Ababa Plans Pricing](https://apis.io/plans/ababa/ababa-plans-pricing/)
+- [ABABA Plans Pricing](https://apis.io/plans/ababa/ababa-plans-pricing/)
 
 #### Rate limits (1)
 
 Published request limits.
 
-- [Ababa Rate Limits](https://apis.io/rate-limits/ababa/ababa-rate-limits/)
+- [ABABA Rate Limits](https://apis.io/rate-limits/ababa/ababa-rate-limits/)
 
 ## Where to find this API
 
@@ -105,7 +105,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 
 ## API Evangelist rating
 
-**Kin Score 5.9** — minimal · rubric 0.24.0 · scored 2026-10-17
+**Kin Score 7.3** — minimal · rubric 0.28.1 · scored 2026-11-21
 
 | Facet | Score |
 |---|---|
@@ -114,7 +114,7 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Contract governance | 0.0 |
 | Operational transparency | 0.0 |
 | Developer ergonomics | 2.4 |
-| Access clarity | 10.5 |
+| Access clarity | 21.3 |
 
 **Agent readiness 2.5** — human-only
 
@@ -139,8 +139,14 @@ Links to the company's own pages. This repository publishes no copy of their spe
 | Protected Resource Metadata | — |
 | Dynamic Client Registration | — |
 | Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+| MCP Tool Quality | na |
+| Onboarding Descriptor | — |
+| Dns Aid Index | na |
+| Markdown Negotiation | na |
 
-**Regulatory alignment 9.1** — Employment & Payroll
+**Regulatory alignment 3.6** — Employment & Payroll
 
 The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ababa/](https://apis.io/providers/ababa/).
 
